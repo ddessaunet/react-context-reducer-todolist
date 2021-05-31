@@ -2,3 +2,8 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.App_todoApp {
+  border-radius: 10px;
+  background-color: #6523df;
+}
