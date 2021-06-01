@@ -6,13 +6,13 @@
 }
 
 .TodoInput_input {
-  width: 600px;
+  width: 400px;
   height: 40px;
   margin: 10px;
 }
 
 .TodoInput_button {
-  width: 600px;
+  width: 400px;
   height: 40px;
   margin: 10px;
   border-radius: 10px;
