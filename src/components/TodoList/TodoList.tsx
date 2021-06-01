@@ -13,7 +13,7 @@ export const TodoList = ({ children }: TodoListProps): JSX.Element => {
       <h1>TO-DOS</h1>
       <ul className="TodoList_list">
         {todos.map((todo: any) => (
-          <li className="TodoList_element">
+          <li className="TodoList_element" key={`TodoList_${todo.id}`}>
             <span>{todo.text}</span>
             <div className="TodoList_buttons">
               <button onClick={() => {}}>TOGGLE</button>
