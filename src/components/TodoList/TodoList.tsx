@@ -12,15 +12,19 @@ export const TodoList = ({ children }: TodoListProps): JSX.Element => {
     <div className="TodoList_container">
       <h1>TO-DOS</h1>
       <ul className="TodoList_list">
-        {todos.map((todo: any) => (
-          <li className="TodoList_element" key={`TodoList_${todo.id}`}>
-            <span>{todo.text}</span>
-            <div className="TodoList_buttons">
-              <button onClick={() => toggleTodo(todo.id)}>TOGGLE</button>
-              <button onClick={() => deleteTodo(todo.id)}>DELETE</button>
-            </div>
-          </li>
-        ))}
+        {todos.length ? (
+          todos.map((todo: any) => (
+            <li className="TodoList_element" key={`TodoList_${todo.id}`}>
+              <span>{todo.text}</span>
+              <div className="TodoList_buttons">
+                <button onClick={() => toggleTodo(todo.id)}>TOGGLE</button>
+                <button onClick={() => deleteTodo(todo.id)}>DELETE</button>
+              </div>
+            </li>
+          ))
+        ) : (
+          <span>The List is empty</span>
+        )}
       </ul>
     </div>
   );
