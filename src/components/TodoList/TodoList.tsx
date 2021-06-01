@@ -7,7 +7,7 @@ type TodoListProps = {
   children?: React.ReactNode;
 };
 export const TodoList = ({ children }: TodoListProps): JSX.Element => {
-  const { todos } = useContext(TodoContext);
+  const { todos, deleteTodo, toggleTodo } = useContext(TodoContext);
   return (
     <div className="TodoList_container">
       <h1>TO-DOS</h1>
@@ -16,8 +16,8 @@ export const TodoList = ({ children }: TodoListProps): JSX.Element => {
           <li className="TodoList_element" key={`TodoList_${todo.id}`}>
             <span>{todo.text}</span>
             <div className="TodoList_buttons">
-              <button onClick={() => {}}>TOGGLE</button>
-              <button onClick={() => {}}>DELETE</button>
+              <button onClick={() => toggleTodo(todo.id)}>TOGGLE</button>
+              <button onClick={() => deleteTodo(todo.id)}>DELETE</button>
             </div>
           </li>
         ))}
