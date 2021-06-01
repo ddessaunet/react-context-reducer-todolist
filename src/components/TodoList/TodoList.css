@@ -25,3 +25,8 @@
 .TodoList_buttons > button {
   margin: 0 10px;
 }
+
+.TodoList_doneState {
+  text-decoration: line-through;
+  color: red;
+}

@@ -15,7 +15,9 @@ export const TodoList = ({ children }: TodoListProps): JSX.Element => {
         {todos.length ? (
           todos.map((todo: any) => (
             <li className="TodoList_element" key={`TodoList_${todo.id}`}>
-              <span>{todo.text}</span>
+              <span className={todo.complete ? "TodoList_doneState" : ""}>
+                {todo.text}
+              </span>
               <div className="TodoList_buttons">
                 <button onClick={() => toggleTodo(todo.id)}>TOGGLE</button>
                 <button onClick={() => deleteTodo(todo.id)}>DELETE</button>

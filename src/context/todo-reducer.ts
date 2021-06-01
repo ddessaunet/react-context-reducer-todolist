@@ -15,10 +15,17 @@ const TodoReducer = (state: any, action: any) => {
         todos: filterTodos
       };
     case TodoActions.TOGGLE_TODO:
-      const toggleTodo = todos.filter(({ id }: any) => id === action.payload);
+      const toggleTodo = todos.find(({ id }: any) => id === action.payload);
+      console.log(toggleTodo);
       return {
         ...state,
-        todos: [todos]
+        todos: [
+          ...todos.filter(({ id }: any) => id !== action.payload),
+          {
+            ...toggleTodo,
+            complete: !toggleTodo.complete
+          }
+        ]
       };
     default:
       return state;
