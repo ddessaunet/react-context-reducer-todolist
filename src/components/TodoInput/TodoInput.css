@@ -1,0 +1,19 @@
+.TodoInput_container {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(21, 4, 68);
+  color: white;
+}
+
+.TodoInput_input {
+  width: 600px;
+  height: 40px;
+  margin: 10px;
+}
+
+.TodoInput_button {
+  width: 600px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,27 @@
+.TodoList_container {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(21, 4, 68);
+  color: white;
+}
+
+.TodoList_list {
+  list-style: none;
+  margin-left: 0px;
+}
+
+.TodoList_element {
+  display: flex;
+  align-items: flex-start;
+  background-color: grey;
+  padding: 10px;
+  margin: 5px;
+}
+
+.TodoList_buttons {
+  margin-left: auto;
+}
+
+.TodoList_buttons > button {
+  margin: 0 10px;
+}
